@@ -4,10 +4,86 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>WKP5</title>
+		<style>
+			.container {
+				max-width: 800px;
+				display: flex;
+				flex-wrap: wrap;
+				background-color: darkcyan;
+			}
+
+			.recipe {
+				max-width: 300px;
+				margin: 1rem;
+				background-color: white;
+				padding: 20px;
+				border-radius: 10px;
+			}
+
+			.recipe img {
+				max-width: 280px;
+			}
+
+			ul {
+				list-style: none;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				padding: 0;
+				column-gap: 20px;
+			}
+
+			.ingredients,
+			.steps {
+				display: block;
+				list-style: disc;
+			}
+
+			.outer-modal {
+				width: 100vw;
+				height: 100vh;
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				background-color: grey;
+				opacity: 0;
+				pointer-events: none;
+				display: grid;
+				place-items: center center;
+			}
+
+			.inner-modal {
+				max-width: 800px;
+				max-height: 500px;
+				padding: 20px;
+				background-color: white;
+			}
+
+			.outer-modal.open {
+				opacity: 1;
+				pointer-events: all;
+			}
+
+			.inner-modal img {
+				max-width: 300px;
+			}
+
+			button {
+				background-color: rgba(255, 0, 0, 0.52);
+				color: white;
+				border: 0;
+				border-radius: 5px;
+				text-align: center;
+				height: 30px;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container"></div>
 		<button class="generate">GENERATE RECIPES</button>
+		<div class="outer-modal">
+			<div class="inner-modal"><p>it works</p></div>
+		</div>
+		<button class="add-recipe">Add recipe</button>
 	</body>
 	<script src="script.js"></script>
 </html>
