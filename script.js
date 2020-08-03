@@ -20,7 +20,7 @@ const recipes = [
 		title: 'Ravitoto',
 		picture: 'https://bit.ly/2ZXyiKI',
 		author: 'Mama onja',
-		difficulty: 'difficulty',
+		difficulty: 'difficult',
 		timing: 'less than 15',
 		ingredients: ['cassava leaves', 'salt', 'oil'],
 		steps: [
